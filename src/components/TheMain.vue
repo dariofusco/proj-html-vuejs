@@ -1,6 +1,32 @@
 <script>
 export default {
-
+    data() {
+        return {
+            courses: [
+                {
+                    img: "/course-02-480x298.jpg",
+                    price: "$40.00",
+                    description: "Learning to Write as a Professional Author",
+                    numberLessons: "20",
+                    numberStudents: "50",
+                },
+                {
+                    img: "/stock-full-hd-03-480x298.jpg",
+                    price: "$0.00",
+                    description: "Customer-centric Info-Tech Strategies",
+                    numberLessons: "24",
+                    numberStudents: "769",
+                },
+                {
+                    img: "/stock-full-hd-04-480x298.jpg",
+                    price: "$19.00",
+                    description: "Open Programming Course for Everyone: Python",
+                    numberLessons: "17",
+                    numberStudents: "62",
+                },
+            ],
+        };
+    },
 };
 </script>
 
@@ -72,16 +98,17 @@ export default {
                 <div class="row py-5">
                     <span>JOIN MAXCOACH AT BEST</span>
                     <h3>Latest Online <span class="green">Courses</span></h3>
-                    <div class="card">
-                        <img class="card-img-top" src="../assets/img/course-02-480x298.jpg" alt="course">
+
+                    <div class="card" v-for="singleCourse in courses">
+                        <img class="card-img-top" :src="`../assets/img${singleCourse.img}`" alt="course">
                         <div class="card-body">
-                            <h4 class="green">$40.00</h4>
-                            <p>Learning to Write as a Professional Author</p>
-                            <span class="px-2"><i class="fa-regular fa-file-zipper px-1"></i>20 Lessons</span><span
-                                class="px-2"><i class="fa-regular fa-user px-1"></i>50 Students</span>
+                            <h4 class="green">{{ singleCourse.price }}</h4>
+                            <p>{{ singleCourse.description }}</p>
+                            <span class="px-2"><i class="fa-regular fa-file-zipper px-1"></i>{{ singleCourse.numberLessons }} Lessons</span><span
+                                class="px-2"><i class="fa-regular fa-user px-1"></i>{{ singleCourse.numberStudents }} Students</span>
                         </div>
                     </div>
-
+<!--
                     <div class="card">
                         <img class="card-img-top" src="../assets/img/stock-full-hd-03-480x298.jpg" alt="course">
                         <div class="card-body">
@@ -101,6 +128,8 @@ export default {
                                 class="px-2"><i class="fa-regular fa-user px-1"></i>62 Students</span>
                         </div>
                     </div>
+-->
+
                     <p>Control your personal preference settings to get notified about appropriate courses.
                         <a href="#">View all courses <i class="fa-solid fa-arrow-right-long"></i></a>
                     </p>
