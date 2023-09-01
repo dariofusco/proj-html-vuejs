@@ -28,46 +28,71 @@ export default {
 
 <template>
     <footer>
-        <div class="container py-3">
-            <div class="row">
-                <div class="col-4">
-                    <h5>Address</h5>
-                    <ul class="list-unstyled" v-for="link in footerLinksAddress">
-                        <li>{{ link.name }}</li>
-                    </ul>
-                </div>
-                <div class="col-4">
-                    <h5>Explore</h5>
-                    <ul class="list-unstyled" v-for="link in footerLinksExplore">
-                        <li>{{ link.name }}</li>
-                    </ul>
-                </div>
-                <div class="col-4">
-                    <h5>Information</h5>
-                    <ul class="list-unstyled" v-for="link in footerLinksInformation">
-                        <li>{{ link.name }}</li>
-                    </ul>
+
+        <!--Sezione Subscribe-->
+        <div class="container py-5 text-center">
+            <div class="row py-5">
+                <h1>Subscribe <span class="green">Newsletters</span></h1>
+                <p>Enter your email address to register to our newsletter subscription delivered on a regular basis!</p>
+                <div class="input-group mb-3 justify-content-center">
+                    <input type="text" class="form-control" placeholder="Enter your email" aria-label="Enter your email"
+                        aria-describedby="button-addon2">
+                    <button class="btn btn-outline-secondary btn-success" type="button"
+                        id="button-addon2">Subscribe</button>
                 </div>
             </div>
-            <div class="text-center">
-                <span><i class="fa-regular fa-copyright"></i> 2020 Maxcoach. All Rights Reserved</span>
+        </div>
+
+        <!--Footer's links-->
+        <div class="bg-dark">
+            <div class="container py-3">
+                <div class="row">
+                    <div class="col-4">
+                        <h5>Address</h5>
+                        <ul class="list-unstyled" v-for="link in footerLinksAddress">
+                            <li>{{ link.name }}</li>
+                        </ul>
+                    </div>
+                    <div class="col-4">
+                        <h5>Explore</h5>
+                        <ul class="list-unstyled" v-for="link in footerLinksExplore">
+                            <li>{{ link.name }}</li>
+                        </ul>
+                    </div>
+                    <div class="col-4">
+                        <h5>Information</h5>
+                        <ul class="list-unstyled" v-for="link in footerLinksInformation">
+                            <li>{{ link.name }}</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="text-center">
+                    <span><i class="fa-regular fa-copyright"></i> 2020 Maxcoach. All Rights Reserved</span>
+                </div>
             </div>
         </div>
     </footer>
 </template>
 
 <style lang="scss" scoped>
-footer {
-    background-color: #18171f;
-}
-
 h5 {
     color: white;
 }
 
-ul, span {
+ul,
+span {
     color: #696969;
 }
 
+.green {
+    color: #20ad96;
+}
 
+.form-control {
+    max-width: 20rem;
+}
+
+.btn-success {
+    background-color: #20ad96;
+}
 </style>
