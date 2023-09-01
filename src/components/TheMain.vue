@@ -126,21 +126,61 @@ export default {
         </div>
         <!--Sezione everything-->
         <div class="container py-5">
-                <div class="row py-5">
-                    <div class="col-6">
-                        <img class="image" src="../assets/img/immagine2023-09-01102319.jpg" alt="">
-                    </div>
-                    <div class="col-3"></div>
-                    <div class="col-3">
-                        <span>EVERYTHING IN MAXCOACH</span>
-                        <h3>We're Here To <span class="green">Transform</span> You!</h3>
-                        <p>As learners, people can enjoy great companionship from MaxCoach mentors
-                            and educators. We can help you develop and grow at your best.
-                        </p>
-                        <button type="button" class="btn btn-success">Get Free Guide</button>
-                    </div>
+            <div class="row py-5">
+                <div class="col-6">
+                    <img class="image" src="../assets/img/immagine2023-09-01102319.jpg" alt="">
+                </div>
+                <div class="col-3"></div>
+                <div class="col-3">
+                    <span>EVERYTHING IN MAXCOACH</span>
+                    <h3>We're Here To <span class="green">Transform</span> You!</h3>
+                    <p>As learners, people can enjoy great companionship from MaxCoach mentors
+                        and educators. We can help you develop and grow at your best.
+                    </p>
+                    <button type="button" class="btn btn-success">Get Free Guide</button>
                 </div>
             </div>
+        </div>
+        <!--Sezione latest Blog-->
+        <div class="bg-light">
+            <div class="container py-5">
+                <div class="row py-5">
+                    <span class="text-center">READ FOR MORE JOYMENT</span>
+                    <h3 class="text-center">Latest From <span class="green">Our Blogs</span></h3>
+
+                    <div class="card">
+                        <img class="card-img-top" src="../assets/img/artist-blog-03-480x325.jpeg" alt="course">
+                        <div class="card-body">
+                            <h6 class="px-1">ARTIST</h6>
+                            <p class="px-1">Brush Strokes Energize Trees in Paintings</p>
+                            <span><i class="fa-regular fa-calendar px-1"></i>May 15, 2020</span><span class="px-2"><i
+                                    class="fa-solid fa-eye px-1"></i>688 views</span>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img class="card-img-top" src="../assets/img/artist-blog-01-480x325.jpg" alt="course">
+                        <div class="card-body">
+                            <h6 class="px-1">ARTIST</h6>
+                            <p class="px-1">Pocket-Sized Notebooks Hold Miniature Paintings</p>
+                            <span><i class="fa-regular fa-calendar px-1"></i>May 15, 2020</span><span class="px-2"><i
+                                    class="fa-solid fa-eye px-1"></i>603 views</span>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <img class="card-img-top" src="../assets/img/artist-blog-02-480x325.jpg" alt="course">
+                        <div class="card-body">
+                            <h6 class="px-1">ARTIST</h6>
+                            <p class="px-1">Connection Between Self-Portraits and Identity</p>
+                            <span><i class="fa-regular fa-calendar px-1"></i>May 15, 2020</span><span class="px-2"><i
+                                    class="fa-solid fa-eye px-1"></i>397 views</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
     </main>
 </template>
 
