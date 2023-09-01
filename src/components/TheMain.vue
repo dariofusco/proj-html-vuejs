@@ -124,6 +124,23 @@ export default {
                 </div>
             </div>
         </div>
+        <!--Sezione everything-->
+        <div class="container py-5">
+                <div class="row py-5">
+                    <div class="col-6">
+                        <img class="image" src="../assets/img/immagine2023-09-01102319.jpg" alt="">
+                    </div>
+                    <div class="col-3"></div>
+                    <div class="col-3">
+                        <span>EVERYTHING IN MAXCOACH</span>
+                        <h3>We're Here To <span class="green">Transform</span> You!</h3>
+                        <p>As learners, people can enjoy great companionship from MaxCoach mentors
+                            and educators. We can help you develop and grow at your best.
+                        </p>
+                        <button type="button" class="btn btn-success">Get Free Guide</button>
+                    </div>
+                </div>
+            </div>
     </main>
 </template>
 
@@ -157,5 +174,9 @@ a {
     width: 25rem;
     margin: 1rem;
     border: none;
+}
+
+.btn-success {
+    background-color: #20ad96;
 }
 </style>
