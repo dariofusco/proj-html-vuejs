@@ -77,8 +77,8 @@ export default {
                         <div class="card-body">
                             <h4 class="green">$40.00</h4>
                             <p>Learning to Write as a Professional Author</p>
-                            <span class="px-2" ><i class="fa-regular fa-file-zipper px-1"></i>20 Lessons</span><span class="px-2"><i
-                                    class="fa-regular fa-user px-1"></i>50 Students</span>
+                            <span class="px-2"><i class="fa-regular fa-file-zipper px-1"></i>20 Lessons</span><span
+                                class="px-2"><i class="fa-regular fa-user px-1"></i>50 Students</span>
                         </div>
                     </div>
 
@@ -87,8 +87,8 @@ export default {
                         <div class="card-body">
                             <h4 class="green">$0.00</h4>
                             <p>Customer-centric Info-Tech Strategies</p>
-                            <span class="px-2"><i class="fa-regular fa-file-zipper px-1"></i>24 Lessons</span><span class="px-2"><i
-                                    class="fa-regular fa-user px-1"></i>769 Students</span>
+                            <span class="px-2"><i class="fa-regular fa-file-zipper px-1"></i>24 Lessons</span><span
+                                class="px-2"><i class="fa-regular fa-user px-1"></i>769 Students</span>
                         </div>
                     </div>
 
@@ -97,13 +97,30 @@ export default {
                         <div class="card-body">
                             <h4 class="green">$19.00</h4>
                             <p>Open Programming Course for Everyone: Python</p>
-                            <span class="px-2"><i class="fa-regular fa-file-zipper px-1"></i>17 Lessons</span><span class="px-2"><i
-                                    class="fa-regular fa-user px-1"></i>62 Students</span>
+                            <span class="px-2"><i class="fa-regular fa-file-zipper px-1"></i>17 Lessons</span><span
+                                class="px-2"><i class="fa-regular fa-user px-1"></i>62 Students</span>
                         </div>
                     </div>
                     <p>Control your personal preference settings to get notified about appropriate courses.
                         <a href="#">View all courses <i class="fa-solid fa-arrow-right-long"></i></a>
                     </p>
+                </div>
+            </div>
+        </div>
+        <!--Sezione testimonials-->
+        <div class="container py-5">
+            <div class="row py-5">
+                <div class="col-3">
+                    <span>TESTIMONIALS</span>
+                    <h3>Why Do People <span class="green">*Hearts*</span> Us?</h3>
+                    <p>Seeking for verbals of our service quality? Find them here.
+                        Everything is transparent and straightforward for your sense of justification.
+                    </p>
+                    <a href="#">View all <i class="fa-solid fa-arrow-right-long"></i></a>
+                </div>
+                <div class="col-2"></div>
+                <div class="col-7">
+                    <img class="image" src="../assets/img/immagine2023-09-01102152.jpg" alt="">
                 </div>
             </div>
         </div>
