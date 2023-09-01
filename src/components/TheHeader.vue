@@ -17,7 +17,7 @@ export default {
 
 <template>
     <header>
-
+        <!--Navbar-->
         <nav class="navbar">
             <div class="container-fluid">
                 <ul class="navbar-nav">
@@ -37,6 +37,14 @@ export default {
             </div>
         </nav>
 
+        <!--Sezione Hero-->
+        <div class="hero text-center">
+            <h3>Commence Business</h3>
+            <h1>Distant Mentoring Program</h1>
+            <button type="button" class="btn btn-light">Download free guidebook <i
+                    class="fa-solid fa-arrow-right-long"></i></button>
+        </div>
+
     </header>
 </template>
 
@@ -49,7 +57,7 @@ export default {
     width: 200px;
 }
 
-.input-group{
+.input-group {
     width: auto;
     align-items: center;
     padding-right: 2rem;
@@ -58,11 +66,23 @@ export default {
 .navbar-nav {
     flex-direction: row;
 }
+
 .nav-item {
     padding-left: 2rem;
 }
 
 .button {
     padding-right: 2rem;
+}
+
+.hero {
+    background-image: url(../assets/img/home-3-hero-bg.jpg);
+    height: 700px;
+    padding: 250px;
+    color: white;
+}
+
+.btn {
+    color: #20ad96;
 }
 </style>
