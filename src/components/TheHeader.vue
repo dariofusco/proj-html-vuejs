@@ -17,6 +17,7 @@ export default {
 
 <template>
     <header>
+        
         <!--Navbar-->
         <nav class="navbar">
             <div class="container-fluid">

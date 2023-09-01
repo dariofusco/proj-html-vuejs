@@ -4,28 +4,56 @@ export default {
         return {
             courses: [
                 {
-                    img: "/course-02-480x298.jpg",
+                    img: "course-02-480x298.jpg",
                     price: "$40.00",
                     description: "Learning to Write as a Professional Author",
                     numberLessons: "20",
                     numberStudents: "50",
                 },
                 {
-                    img: "/stock-full-hd-03-480x298.jpg",
+                    img: "stock-full-hd-03-480x298.jpg",
                     price: "$0.00",
                     description: "Customer-centric Info-Tech Strategies",
                     numberLessons: "24",
                     numberStudents: "769",
                 },
                 {
-                    img: "/stock-full-hd-04-480x298.jpg",
+                    img: "stock-full-hd-04-480x298.jpg",
                     price: "$19.00",
                     description: "Open Programming Course for Everyone: Python",
                     numberLessons: "17",
                     numberStudents: "62",
                 },
             ],
+            blogs: [
+                {
+                    img: "artist-blog-03-480x325.jpeg",
+                    name: "ARTIST",
+                    description: "Brush Strokes Energize Trees in Paintings",
+                    date: "May 15, 2020",
+                    views: "688",
+                },
+                {
+                    img: "artist-blog-01-480x325.jpg",
+                    name: "ARTIST",
+                    description: "Pocket-Sized Notebooks Hold Miniature Paintings",
+                    date: "May 15, 2020",
+                    views: "603",
+                },
+                {
+                    img: "artist-blog-02-480x325.jpg",
+                    name: "ARTIST",
+                    description: "Connection Between Self-Portraits and Identity",
+                    date: "May 15, 2020",
+                    views: "397",
+                },
+            ],
         };
+    },
+    methods: {
+        getImagePath: function (img) {
+            return new URL(`../assets/img/${img}`, import.meta.url).href;
+        },
     },
 };
 </script>
@@ -100,42 +128,22 @@ export default {
                     <h3>Latest Online <span class="green">Courses</span></h3>
 
                     <div class="card" v-for="singleCourse in courses">
-                        <img class="card-img-top" :src="`../assets/img${singleCourse.img}`" alt="course">
+                        <img class="card-img-top" :src="getImagePath(singleCourse.img)" alt="course">
                         <div class="card-body">
                             <h4 class="green">{{ singleCourse.price }}</h4>
                             <p>{{ singleCourse.description }}</p>
-                            <span class="px-2"><i class="fa-regular fa-file-zipper px-1"></i>{{ singleCourse.numberLessons }} Lessons</span><span
-                                class="px-2"><i class="fa-regular fa-user px-1"></i>{{ singleCourse.numberStudents }} Students</span>
+                            <span class="px-2"><i class="fa-regular fa-file-zipper px-1"></i>{{ singleCourse.numberLessons
+                            }} Lessons</span><span class="px-2"><i class="fa-regular fa-user px-1"></i>{{
+    singleCourse.numberStudents }} Students</span>
                         </div>
                     </div>
-<!--
-                    <div class="card">
-                        <img class="card-img-top" src="../assets/img/stock-full-hd-03-480x298.jpg" alt="course">
-                        <div class="card-body">
-                            <h4 class="green">$0.00</h4>
-                            <p>Customer-centric Info-Tech Strategies</p>
-                            <span class="px-2"><i class="fa-regular fa-file-zipper px-1"></i>24 Lessons</span><span
-                                class="px-2"><i class="fa-regular fa-user px-1"></i>769 Students</span>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <img class="card-img-top" src="../assets/img/stock-full-hd-04-480x298.jpg" alt="course">
-                        <div class="card-body">
-                            <h4 class="green">$19.00</h4>
-                            <p>Open Programming Course for Everyone: Python</p>
-                            <span class="px-2"><i class="fa-regular fa-file-zipper px-1"></i>17 Lessons</span><span
-                                class="px-2"><i class="fa-regular fa-user px-1"></i>62 Students</span>
-                        </div>
-                    </div>
--->
-
                     <p>Control your personal preference settings to get notified about appropriate courses.
                         <a href="#">View all courses <i class="fa-solid fa-arrow-right-long"></i></a>
                     </p>
                 </div>
             </div>
         </div>
+
         <!--Sezione testimonials-->
         <div class="container py-5">
             <div class="row py-5">
@@ -153,6 +161,7 @@ export default {
                 </div>
             </div>
         </div>
+
         <!--Sezione everything-->
         <div class="container py-5">
             <div class="row py-5">
@@ -170,6 +179,7 @@ export default {
                 </div>
             </div>
         </div>
+
         <!--Sezione latest Blog-->
         <div class="bg-light">
             <div class="container py-5">
@@ -177,36 +187,15 @@ export default {
                     <span class="text-center">READ FOR MORE JOYMENT</span>
                     <h3 class="text-center">Latest From <span class="green">Our Blogs</span></h3>
 
-                    <div class="card">
-                        <img class="card-img-top" src="../assets/img/artist-blog-03-480x325.jpeg" alt="course">
+                    <div class="card" v-for="singleBlog in blogs">
+                        <img class="card-img-top" :src="getImagePath(singleBlog.img)" alt="course">
                         <div class="card-body">
-                            <h6 class="px-1">ARTIST</h6>
-                            <p class="px-1">Brush Strokes Energize Trees in Paintings</p>
-                            <span><i class="fa-regular fa-calendar px-1"></i>May 15, 2020</span><span class="px-2"><i
-                                    class="fa-solid fa-eye px-1"></i>688 views</span>
+                            <h6 class="px-1">{{ singleBlog.name }}</h6>
+                            <p class="px-1">{{ singleBlog.description }}</p>
+                            <span><i class="fa-regular fa-calendar px-1"></i>{{ singleBlog.date }}</span><span
+                                class="px-2"><i class="fa-solid fa-eye px-1"></i>{{ singleBlog.views }} views</span>
                         </div>
                     </div>
-
-                    <div class="card">
-                        <img class="card-img-top" src="../assets/img/artist-blog-01-480x325.jpg" alt="course">
-                        <div class="card-body">
-                            <h6 class="px-1">ARTIST</h6>
-                            <p class="px-1">Pocket-Sized Notebooks Hold Miniature Paintings</p>
-                            <span><i class="fa-regular fa-calendar px-1"></i>May 15, 2020</span><span class="px-2"><i
-                                    class="fa-solid fa-eye px-1"></i>603 views</span>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <img class="card-img-top" src="../assets/img/artist-blog-02-480x325.jpg" alt="course">
-                        <div class="card-body">
-                            <h6 class="px-1">ARTIST</h6>
-                            <p class="px-1">Connection Between Self-Portraits and Identity</p>
-                            <span><i class="fa-regular fa-calendar px-1"></i>May 15, 2020</span><span class="px-2"><i
-                                    class="fa-solid fa-eye px-1"></i>397 views</span>
-                        </div>
-                    </div>
-
                 </div>
             </div>
         </div>
