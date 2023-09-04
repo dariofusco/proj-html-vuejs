@@ -1,5 +1,11 @@
 <script>
+import CardCourses from './CardCourses.vue';
+import CardBlogs from './CardBlogs.vue';
 export default {
+    components: {
+        CardCourses,
+        CardBlogs,
+    },
     data() {
         return {
             courses: [
@@ -127,16 +133,11 @@ export default {
                     <span>JOIN MAXCOACH AT BEST</span>
                     <h3>Latest Online <span class="green">Courses</span></h3>
 
-                    <div class="card" v-for="singleCourse in courses">
-                        <img class="card-img-top" :src="getImagePath(singleCourse.img)" alt="course">
-                        <div class="card-body">
-                            <h4 class="green">{{ singleCourse.price }}</h4>
-                            <p>{{ singleCourse.description }}</p>
-                            <span class="px-2"><i class="fa-regular fa-file-zipper px-1"></i>{{ singleCourse.numberLessons
-                            }} Lessons</span><span class="px-2"><i class="fa-regular fa-user px-1"></i>{{
-    singleCourse.numberStudents }} Students</span>
-                        </div>
-                    </div>
+                    <CardCourses v-for="singleCourse in courses" :img="getImagePath(singleCourse.img)"
+                        :price="singleCourse.price" :description="singleCourse.description"
+                        :numberLessons="singleCourse.numberLessons" :numberStudents="singleCourse.numberStudents">
+                    </CardCourses>
+
                     <p>Control your personal preference settings to get notified about appropriate courses.
                         <a href="#">View all courses <i class="fa-solid fa-arrow-right-long"></i></a>
                     </p>
@@ -187,15 +188,9 @@ export default {
                     <span class="text-center">READ FOR MORE JOYMENT</span>
                     <h3 class="text-center">Latest From <span class="green">Our Blogs</span></h3>
 
-                    <div class="card" v-for="singleBlog in blogs">
-                        <img class="card-img-top" :src="getImagePath(singleBlog.img)" alt="course">
-                        <div class="card-body">
-                            <h6 class="px-1">{{ singleBlog.name }}</h6>
-                            <p class="px-1">{{ singleBlog.description }}</p>
-                            <span><i class="fa-regular fa-calendar px-1"></i>{{ singleBlog.date }}</span><span
-                                class="px-2"><i class="fa-solid fa-eye px-1"></i>{{ singleBlog.views }} views</span>
-                        </div>
-                    </div>
+                    <CardBlogs v-for="singleBlog in blogs" :img="getImagePath(singleBlog.img)" :name="singleBlog.name"
+                        :description="singleBlog.description" :date="singleBlog.date" :views="singleBlog.views"></CardBlogs>
+
                 </div>
             </div>
         </div>
