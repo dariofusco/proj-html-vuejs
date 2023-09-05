@@ -7,12 +7,22 @@ export default {
         numberLessons: String,
         numberStudents: String,
     },
+    data() {
+        return {
+
+        };
+    },
+    methods: {
+        getImagePath: function (img) {
+            return new URL(`../assets/img/${img}`, import.meta.url).href;
+        },
+    },
 };
 </script>
 
 <template>
     <div class="card">
-        <img class="card-img-top" :src="img" alt="course">
+        <img class="card-img-top" :src="getImagePath(img)" alt="course">
         <div class="card-body">
             <h4 class="green">{{ price }}</h4>
             <p>{{ description }}</p>
@@ -23,7 +33,8 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use "../styles/partials/variables" as *;
 .green {
-    color: #20ad96;
+    color: $primary_color;
 }
 </style>

@@ -75,6 +75,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use "../styles/partials/variables" as *;
 h5 {
     color: white;
 }
@@ -85,7 +86,7 @@ span {
 }
 
 .green {
-    color: #20ad96;
+    color: $primary_color;
 }
 
 .form-control {
@@ -93,6 +94,6 @@ span {
 }
 
 .btn-success {
-    background-color: #20ad96;
+    background-color: $primary_color;
 }
 </style>

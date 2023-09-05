@@ -50,6 +50,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use "../styles/partials/variables" as *;
 .form-control {
     max-width: 10rem;
 }
@@ -84,6 +85,6 @@ export default {
 }
 
 .btn {
-    color: #20ad96;
+    color: $primary_color;
 }
 </style>

@@ -1,10 +1,10 @@
 <script>
-import CardCourses from './CardCourses.vue';
-import CardBlogs from './CardBlogs.vue';
+import CardCourse from './CardCourse.vue';
+import CardBlog from './CardBlog.vue';
 export default {
     components: {
-        CardCourses,
-        CardBlogs,
+        CardCourse,
+        CardBlog,
     },
     data() {
         return {
@@ -57,9 +57,7 @@ export default {
         };
     },
     methods: {
-        getImagePath: function (img) {
-            return new URL(`../assets/img/${img}`, import.meta.url).href;
-        },
+
     },
 };
 </script>
@@ -133,10 +131,10 @@ export default {
                     <span>JOIN MAXCOACH AT BEST</span>
                     <h3>Latest Online <span class="green">Courses</span></h3>
 
-                    <CardCourses v-for="singleCourse in courses" :img="getImagePath(singleCourse.img)"
-                        :price="singleCourse.price" :description="singleCourse.description"
-                        :numberLessons="singleCourse.numberLessons" :numberStudents="singleCourse.numberStudents">
-                    </CardCourses>
+                    <CardCourse v-for="singleCourse in courses" :img="singleCourse.img" :price="singleCourse.price"
+                        :description="singleCourse.description" :numberLessons="singleCourse.numberLessons"
+                        :numberStudents="singleCourse.numberStudents">
+                    </CardCourse>
 
                     <p>Control your personal preference settings to get notified about appropriate courses.
                         <a href="#">View all courses <i class="fa-solid fa-arrow-right-long"></i></a>
@@ -188,8 +186,8 @@ export default {
                     <span class="text-center">READ FOR MORE JOYMENT</span>
                     <h3 class="text-center">Latest From <span class="green">Our Blogs</span></h3>
 
-                    <CardBlogs v-for="singleBlog in blogs" :img="getImagePath(singleBlog.img)" :name="singleBlog.name"
-                        :description="singleBlog.description" :date="singleBlog.date" :views="singleBlog.views"></CardBlogs>
+                    <CardBlog v-for="singleBlog in blogs" :img="singleBlog.img" :name="singleBlog.name"
+                        :description="singleBlog.description" :date="singleBlog.date" :views="singleBlog.views"></CardBlog>
 
                 </div>
             </div>
@@ -198,6 +196,8 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@use "../styles/partials/variables" as *;
+
 .overlap {
     position: absolute;
     top: -80px;
@@ -216,7 +216,7 @@ export default {
 }
 
 .green {
-    color: #20ad96;
+    color: $primary_color;
 }
 
 a {
@@ -230,6 +230,6 @@ a {
 }
 
 .btn-success {
-    background-color: #20ad96;
+    background-color: $primary_color;
 }
 </style>
